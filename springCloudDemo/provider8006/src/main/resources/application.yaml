@@ -1,0 +1,15 @@
+server:
+  port: 8006
+spring:
+  application:
+    name: consul-provider-payment
+  cloud:
+    consul:
+      host: 81.69.193.138
+      port: 8500
+      discovery:
+        service-name: ${spring.application.name}
+        # 表示注册时使用IP而不是hostname
+        prefer-ip-address: true
+        # SpringBoot服务所在的ip(非必填)
+        ip-address: 192.168.43.246
